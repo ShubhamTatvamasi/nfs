@@ -51,3 +51,13 @@ kubectl exec task-pv-pod -- bash -c "echo 'Hello World' > /usr/share/nginx/html/
 
 kubectl exec task-pv-pod -- cat /usr/share/nginx/html/index.html
 ```
+
+Delete the pod and recreate it again: 
+```bash
+kubectl delete po/task-pv-pod
+```
+
+Once checked that file still exist delete everything:
+```bash
+kubectl delete po/task-pv-pod pvc/task-pv-claim
+```
