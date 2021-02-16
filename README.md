@@ -16,7 +16,7 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 50Gi
+    storage: 20Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -32,7 +32,7 @@ kubectl create ns nfs-server-provisioner
 helm install nfs-server-provisioner stable/nfs-server-provisioner \
   --namespace nfs-server-provisioner \
   --set image.tag=v2.3.0 \
-  --set persistence.size=50Gi \
+  --set persistence.size=20Gi \
   --set persistence.enabled=true \
   --set persistence.storageClass=manual \
   --set storageClass.defaultClass=true
