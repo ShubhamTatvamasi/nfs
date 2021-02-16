@@ -37,6 +37,9 @@ helm install nfs-server-provisioner stable/nfs-server-provisioner \
   --set persistence.storageClass=manual \
   --set storageClass.defaultClass=true
 ```
+---
+
+### Test PVC Setup
 
 setup pvc and pod:
 ```bash
