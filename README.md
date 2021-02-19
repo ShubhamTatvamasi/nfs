@@ -1,5 +1,10 @@
 # nfs
 
+Install the following package on node:
+```bash
+sudo apt install -y nfs-common
+```
+
 Add helm stable repo:
 ```bash
 helm repo add stable https://charts.helm.sh/stable/
