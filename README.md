@@ -32,9 +32,8 @@ EOF
 
 Install NFS Server Provisioner:
 ```bash
-kubectl create ns nfs-server-provisioner
-
 helm install nfs-server-provisioner stable/nfs-server-provisioner \
+  --create-namespace \
   --namespace nfs-server-provisioner \
   --set image.tag=v2.3.0 \
   --set persistence.size=20Gi \
