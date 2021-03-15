@@ -2,7 +2,7 @@
 
 Install the following package on node:
 ```bash
-sudo apt install -y nfs-common
+dpkg -l nfs-common || sudo apt install -y nfs-common
 ```
 
 Add helm stable repo:
