@@ -21,7 +21,7 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 20Gi
+    storage: 40Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -36,7 +36,7 @@ helm install nfs-server-provisioner stable/nfs-server-provisioner \
   --create-namespace \
   --namespace nfs-server-provisioner \
   --set image.tag=v2.3.0 \
-  --set persistence.size=20Gi \
+  --set persistence.size=40Gi \
   --set persistence.enabled=true \
   --set persistence.storageClass=manual \
   --set storageClass.defaultClass=true
