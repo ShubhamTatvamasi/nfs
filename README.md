@@ -21,11 +21,11 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 50Gi
+    storage: 90Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /mnt/persistentvols/nfs
+    path: /var/data/nfs
 EOF
 ```
 
@@ -36,7 +36,7 @@ helm install nfs-server-provisioner stable/nfs-server-provisioner \
   --create-namespace \
   --namespace nfs-server-provisioner \
   --set image.tag=v2.3.0 \
-  --set persistence.size=50Gi \
+  --set persistence.size=90Gi \
   --set persistence.enabled=true \
   --set persistence.storageClass=manual \
   --set storageClass.defaultClass=true
