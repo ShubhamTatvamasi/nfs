@@ -47,7 +47,8 @@ helm install nfs-server-provisioner stable/nfs-server-provisioner \
 
 setup pvc and pod:
 ```bash
-curl -sL https://k8s.io/examples/pods/storage/pv-claim.yaml | sed 's/manual/nfs/' | kubectl apply -f -
+curl -sL https://k8s.io/examples/pods/storage/pv-claim.yaml \
+  | sed 's/manual/nfs/' | kubectl apply -f -
 
 kubectl apply -f https://k8s.io/examples/pods/storage/pv-pod.yaml
 ```
