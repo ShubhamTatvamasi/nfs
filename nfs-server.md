@@ -10,6 +10,12 @@ Check status for NFS server:
 sudo systemctl status nfs-server
 ```
 
+Change permissions:
+```bash
+sudo chown nobody:nogroup /mnt/
+sudo chmod -R 777 /mnt/
+```
+
 Edit mount path:
 ```bash
 sudo vim /etc/exports
